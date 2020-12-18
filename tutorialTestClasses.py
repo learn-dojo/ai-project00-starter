@@ -32,7 +32,7 @@ class EvalTest(testClasses.TestCase):
 
     def evalCode(self, moduleDict):
         bindings = dict(moduleDict)
-        exec(self.preamble in bindings)
+        exec(self.preamble, bindings)
         return str(eval(self.test, bindings))
 
     def execute(self, grades, moduleDict, solutionDict):
