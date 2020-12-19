@@ -15,9 +15,10 @@
 """
 Run python autograder.py
 """
-
+f = lambda a, b : a + b
 
 def add(a, b):
     "Return the sum of a and b"
     "*** YOUR CODE HERE ***"
-    return a + b
+    print("Passed a = %s and b = %s, returning a + b = %s" % (a,b,f(a, b)))
+    return f(a, b)
